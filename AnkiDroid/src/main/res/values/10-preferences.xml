@@ -29,6 +29,7 @@
     <string name="pref_cat_reviewer_behaviour">Behavior</string>
     <string name="pref_cat_flashcard">Display</string>
     <string name="pref_cat_whiteboard">Whiteboard</string>
+    <string name="pref_cat_audio">Audio</string>
     <string name="pref_cat_automatic_display">Automatic display answer</string>
     <string name="pref_cat_appearance">Appearance</string>
     <string name="pref_cat_appearance_summ">Change themes and default font</string>
@@ -49,6 +50,8 @@
     <string name="whiteboard_stroke_width">Stroke width</string>
     <string name="whiteboard_black">Black strokes</string>
     <string name="whiteboard_black_summ">Uses less memory, unless in night mode</string>
+    <string name="audio_duck_audio">Duck audio</string>
+    <string name="audio_duck_audio_summ">Reduce the volume of other media during revision of cards containing audio</string>
     <string name="use_input_tag">Type answer into the card</string>
     <string name="use_input_tag_summ">Use a text input box inside the card to type in the answer</string>
     <string name="dictionary">Lookup dictionary</string>

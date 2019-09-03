@@ -324,14 +324,36 @@ public class Sound {
                     mMediaPlayer.setOnCompletionListener(playAllListener);
                 }
                 mMediaPlayer.prepareAsync();
-                mAudioManager.requestAudioFocus(afChangeListener, AudioManager.STREAM_MUSIC,
-                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK);
+                boolean shouldGainAudioFocus = shouldGainAudioFocus(videoView);
+                if (shouldGainAudioFocus) {
+                    mAudioManager.requestAudioFocus(afChangeListener, AudioManager.STREAM_MUSIC,
+                            AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK);
+                }
             } catch (Exception e) {
                 Timber.e(e, "playSounds - Error reproducing sound %s", soundPath);
                 releaseSound();
             }
         }
     }
+
+
+    /**
+     * Determines if AudioFocus should be gained by receiving the corresponding preferences
+     */
+    private boolean shouldGainAudioFocus(VideoView videoView) {
+        boolean shouldGainAudioFocus = true;
+        Context context = null;
+        if (mCallingActivity != null && mCallingActivity.get() != null) {
+            context = mCallingActivity.get();
+        } else if (videoView != null && videoView.getContext() != null) {
+            context = videoView.getContext();
+        }
+        if (context != null) {
+            shouldGainAudioFocus = AnkiDroidApp.getSharedPrefs(context).getBoolean("shouldGainAudioFocus", true);
+        }
+        return shouldGainAudioFocus;
+    }
+
 
     private static void configureVideo(VideoView videoView, int videoWidth, int videoHeight) {
         // get the display

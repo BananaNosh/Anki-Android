@@ -50,6 +50,7 @@
     <string name="pref_cat_reviewer_behaviour">Verhalten</string>
     <string name="pref_cat_flashcard">Anzeige</string>
     <string name="pref_cat_whiteboard">Whiteboard</string>
+    <string name="pref_cat_audio">Audio</string>
     <string name="pref_cat_automatic_display">Antworten automatisch zeigen</string>
     <string name="pref_cat_appearance">Erscheinungsbild</string>
     <string name="pref_cat_appearance_summ">Themes und Standard-Schriftart ändern</string>
@@ -69,6 +70,8 @@
     <string name="whiteboard_stroke_width">Pinselbreite</string>
     <string name="whiteboard_black">Schwarzer Pinsel</string>
     <string name="whiteboard_black_summ">Spart Hauptspeicher, außer im Nachtmodus</string>
+    <string name="audio_duck_audio">Audio reduzieren</string>
+    <string name="audio_duck_audio_summ">Reduziert die Lautstärke anderer Medien, wenn Karten mit Audio wiederholt werden</string>
     <string name="use_input_tag">Antwort in Karte eintippen</string>
     <string name="use_input_tag_summ">Ein Texteingabefeld in der Karte benutzen, in das die Antwort getippt werden kann</string>
     <string name="dictionary">Nachschlagen in Wörterbuch</string>

@@ -133,6 +133,13 @@
             android:summary="@string/whiteboard_black_summ"
             android:title="@string/whiteboard_black" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_cat_audio" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="shouldGainAudioFocus"
+            android:summary="@string/audio_duck_audio_summ"
+            android:title="@string/audio_duck_audio" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_cat_automatic_display" >
         <CheckBoxPreference
             android:defaultValue="false"
